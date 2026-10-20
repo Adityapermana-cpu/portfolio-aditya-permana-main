@@ -534,7 +534,7 @@ export const experienceData: ExperienceItem[] = [
 
   {
   id: 'kedai-bintang',
-  period: 'Jan - Mar 2026',
+  period: '1 Jan - 31 Mar 2026',
   role: 'Crew Outlet',
   organization: 'Kedai Bintang',
   badge: 'Work Experience',
@@ -561,7 +561,7 @@ export const experienceData: ExperienceItem[] = [
 
   {
   id: 'dimsum-narawi',
-  period: 'Apr - Aug 2026',
+  period: '5 Apr - 25 Aug 2026',
   role: 'Kasir & Kitchen',
   organization: 'Dimsum Narawi',
   badge: 'Work Experience',
@@ -591,7 +591,7 @@ export const experienceData: ExperienceItem[] = [
 },
 {
   id: 'cv-makmur-bersama-maju',
-  period: 'Aug - Sep 2026',
+  period: '31 Aug - 16 Okt 2026',
   role: 'Admin Penjualan',
   organization: 'CV Makmur Bersama Maju',
   badge: 'Work Experience',
