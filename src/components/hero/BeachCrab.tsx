@@ -8,11 +8,11 @@ export interface BeachCrabHandle {
 }
 
 const CRAB_DIALOGUES = [
-  '*Klak klik capit*',
-  'Neraca saldo seimbang, pembukuan rapi terkendali!',
-  'Arsip faktur pajak dan bukti potong sudah terorganisir!',
-  'Capit tangguh siap amankan kepatuhan fiskal!',
-  'Kertas kerja audit buatan Kak Intan rapi dan presisi!'
+  'Klak klik capit',
+  'Data tersusun rapi, pekerjaan pun lebih terkendali!',
+  'Dokumen dan arsip penting harus terorganisir dengan baik!',
+  'Capit tangguh siap membantu menyelesaikan pekerjaan dengan teliti!',
+  'Ketelitian dan tanggung jawab adalah kunci hasil kerja yang berkualitas!'
 ];
 
 
