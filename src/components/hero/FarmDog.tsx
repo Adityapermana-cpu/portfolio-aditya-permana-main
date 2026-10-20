@@ -8,16 +8,15 @@ export interface FarmDogHandle {
 }
 
 const DOG_DIALOGUES = [
-  '*Guk guk! Kibas ekor*',
-  'Arsip kepatuhan pajak dan pembukuan aman terkendali di bawah pengawasanku!',
-  'Ayam, jangan sampai lupa cek bukti potong PPh 23 ya!',
-  'Burung walet di atas, tolong pantau faktur masukan dari udara ya!',
-  'Guk! Siap sedia menyambut klien portofolio Kak Intan Srimaya!',
-  'Padang rumputnya segar dan seimbang seperti neraca akuntansi!',
-  'Sistem pembukuan rapi bikin semangat jaga lumbung fiskal!',
-  'Semua perhitungan PPh & PPN di sini akurat dan transparan!'
+  'Guk guk! Kibas ekor',
+  'Dokumen dan data penting harus tersimpan dengan rapi dan aman!',
+  'Ingat, selalu periksa kembali data sebelum menyelesaikan pekerjaan!',
+  'Siap membantu tim menjaga alur kerja tetap teratur!',
+  'Guk! Siap menyambut pengunjung portofolio dengan ramah!',
+  'Pekerjaan yang terorganisir membantu tim bekerja lebih efektif!',
+  'Sistem kerja yang rapi membuat tugas lebih mudah dipantau!',
+  'Setiap pekerjaan dilakukan dengan teliti, bertanggung jawab, dan transparan!'
 ];
-
 
 const createShuffledDeck = (items: string[], lastItem?: string): string[] => {
   const deck = [...items];
