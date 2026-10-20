@@ -13,16 +13,16 @@ interface FarmChickenProps {
 }
 
 const CHICKEN_DIALOGUES = [
-  '♪ Petok petok! Rekonsiliasi fiskal bareng Kak Intan rapi banget ~',
-  'Pagi cerah di peternakan! Jangan lupa cek batas lapor SPT Masa ya!',
-  'Tadi kulihat si anjing gembala lagi asyik jaga arsip faktur pajak!',
-  'Kukuruyuk! Kertas kerja audit Kak Intan seimbang tanpa selisih!',
-  'Koreksi fiskal positif & negatif sudah beres, *patuk patuk* nyam!',
-  'Ayam petelur juara siap nemenin kamu jelajahi portofolio perpajakan ini!',
-  'Kalau ada salah hitung tarif PPh, ayo kita rekonsiliasi sampai tuntas! Petook!',
-  'Brevet Pajak A & B verified, pembukuan rapi bebas sanksi denda DJP!',
-  'Kincir angin berputar kencang, pertanda panen dividen bersih dan patuh!',
-  'Petook! Mau cek studi kasus e-Faktur 4.0 atau rekonsiliasi PT Agro?'
+  '♪ Petok petok! Semangat terus belajar dan mengembangkan kemampuan!',
+  'Pagi cerah! Jangan lupa periksa kembali pekerjaan sebelum diserahkan!',
+  'Kerja sama tim yang baik membuat pekerjaan terasa lebih ringan!',
+  'Kukuruyuk! Tetap teliti, disiplin, dan bertanggung jawab!',
+  'Data sudah diperiksa, dokumen tersusun rapi, patuk patuk mantap!',
+  'Yuk, jelajahi portofolio ini dan kenali kemampuan yang aku miliki!',
+  'Kalau ada kesalahan, mari periksa dan cari solusi sampai tuntas! Petook!',
+  'Terus belajar dan tingkatkan keterampilan untuk menghadapi tantangan baru!',
+  'Konsistensi dan kerja keras membantu kita mencapai hasil terbaik!',
+  'Petook! Siap mencoba tantangan baru dan memberikan hasil kerja terbaik!'
 ];
 
 
