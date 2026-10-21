@@ -131,7 +131,7 @@ export const HeroSection: React.FC = () => {
             </TactileButton>
 
             <a
-              href="https://drive.google.com/file/d/1gAJ0aWtilaKjihI1ykM39_MqJ2e_xW8w/view?usp=drive_link"
+              href="https://drive.google.com/file/d/1h9GQ4M2ZrRoiVogzOpxd9ENQEakp_KPf/view?usp=drive_link"
               download="CV_Aditya_Permana.pdf"
               target="_blank"
               rel="noopener noreferrer"
