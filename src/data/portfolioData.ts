@@ -209,6 +209,7 @@ export const projectsData: Project[] = [
     challenges:
       'Membuat alur pemesanan yang mudah digunakan pelanggan dan sesuai dengan proses kerja outlet.',
     role: 'Digital System Developer',
+    demoUrl: 'https://ramenbintang.kesug.com/',
     isMobileApp: false,
     imageUrl: '/projects/kedai-bintang.png',
     imageFit: 'cover',
@@ -251,6 +252,7 @@ export const projectsData: Project[] = [
     challenges:
       'Menjaga ketelitian input pesanan dan transaksi sambil mendukung persiapan produk serta pelayanan saat jam sibuk.',
     role: 'Operations Case Study',
+    demoUrl: 'https://pesanin.kesug.com/?i=1',
     isMobileApp: false,
     imageUrl: '/projects/dimsum-narawi.png',
     imageFit: 'cover',
