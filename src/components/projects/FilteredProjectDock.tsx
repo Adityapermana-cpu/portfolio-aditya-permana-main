@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import {
@@ -32,6 +33,9 @@ export const FilteredProjectDock: React.FC<FilteredProjectDockProps> = ({
   const [activeProjectId, setActiveProjectId] = useState<string>(
     projects[0]?.id || 'project'
   );
+
+  // Tambahan: state untuk membuka dan menutup studi kasus.
+  const [isCaseStudyOpen, setIsCaseStudyOpen] = useState(false);
 
   const categories: {
     id: ProjectCategory;
@@ -76,6 +80,9 @@ export const FilteredProjectDock: React.FC<FilteredProjectDockProps> = ({
           );
 
     setActiveProjectId(nextProjects[0]?.id || 'project');
+
+    // Tutup studi kasus jika pengguna mengganti kategori.
+    setIsCaseStudyOpen(false);
   };
 
   return (
@@ -166,7 +173,7 @@ export const FilteredProjectDock: React.FC<FilteredProjectDockProps> = ({
                     <div className="flex items-start justify-between gap-3">
                       <div className="flex gap-2.5 min-w-0">
                         <span className="text-[10px] font-mono font-black text-[#15803d] shrink-0">
-                          0{index + 1}
+                          {String(index + 1).padStart(2, '0')}
                         </span>
 
                         <div className="min-w-0">
@@ -265,11 +272,13 @@ export const FilteredProjectDock: React.FC<FilteredProjectDockProps> = ({
                     )}
 
                     <div className="flex flex-wrap gap-2 mt-6">
+                      {/* Studi Kasus */}
                       <button
                         type="button"
-                        onClick={() =>
-                          onSelectProject(activeProject)
-                        }
+                        onClick={() => {
+                          onSelectProject(activeProject);
+                          setIsCaseStudyOpen(true);
+                        }}
                         className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-[#1c1917] text-white border-2 border-[#1c1917] shadow-[3px_3px_0px_#fde047] hover:-translate-y-0.5 transition-all duration-200 cursor-pointer"
                       >
                         <ArrowUpRight className="w-4 h-4" />
@@ -278,7 +287,8 @@ export const FilteredProjectDock: React.FC<FilteredProjectDockProps> = ({
                         </span>
                       </button>
 
-                      {activeProject.demoUrl && (
+                      {/* Live Demo */}
+                      {activeProject.demoUrl ? (
                         <a
                           href={activeProject.demoUrl}
                           target="_blank"
@@ -290,8 +300,19 @@ export const FilteredProjectDock: React.FC<FilteredProjectDockProps> = ({
                             Live Demo
                           </span>
                         </a>
+                      ) : (
+                        <span
+                          title="Tautan demo belum tersedia"
+                          className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-[#f5f5f4] text-[#57534e] border-2 border-[#1c1917]/40"
+                        >
+                          <Lock className="w-4 h-4" />
+                          <span className="text-xs font-black">
+                            Live Demo Belum Tersedia
+                          </span>
+                        </span>
                       )}
 
+                      {/* GitHub / private repository */}
                       {activeProject.isPrivateRepo ? (
                         <span className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-[#f5f5f4] text-[#57534e] border-2 border-[#1c1917]/40">
                           <Lock className="w-4 h-4" />
@@ -328,6 +349,190 @@ export const FilteredProjectDock: React.FC<FilteredProjectDockProps> = ({
           </div>
         </div>
       </div>
+
+      {/* Modal Studi Kasus — tambahan, tidak menggantikan project index */}
+      {isCaseStudyOpen && activeProject && (
+        <div
+          className="fixed inset-0 z-[100] flex items-center justify-center bg-black/70 p-4 sm:p-6"
+          role="dialog"
+          aria-modal="true"
+          aria-labelledby="case-study-title"
+          onClick={(event) => {
+            if (event.target === event.currentTarget) {
+              setIsCaseStudyOpen(false);
+            }
+          }}
+        >
+          <div className="relative max-h-[90vh] w-full max-w-3xl overflow-y-auto rounded-[26px] border-2 border-[#1c1917] bg-[#fffdf5] p-5 shadow-[8px_8px_0px_#fde047] sm:p-8">
+            <button
+              type="button"
+              onClick={() => setIsCaseStudyOpen(false)}
+              aria-label="Tutup studi kasus"
+              className="absolute right-4 top-4 inline-flex h-10 w-10 items-center justify-center rounded-xl border-2 border-[#1c1917] bg-white text-xl font-black text-[#1c1917] hover:bg-[#fde047]"
+            >
+              ×
+            </button>
+
+            <div className="mb-5 inline-flex items-center gap-2 rounded-lg border border-[#1c1917]/40 bg-[#dcfce7] px-3 py-1.5 text-[10px] font-mono font-black text-[#166534]">
+              <BookOpen className="h-4 w-4" />
+              PROJECT CASE STUDY
+            </div>
+
+            <h2
+              id="case-study-title"
+              className="pr-12 text-2xl font-black leading-tight text-[#1c1917] sm:text-4xl"
+            >
+              {activeProject.title}
+            </h2>
+
+            <p className="mt-2 text-sm font-mono font-bold text-[#15803d]">
+              {activeProject.subtitle}
+            </p>
+
+            <div className="mt-6 space-y-6">
+              <section>
+                <h3 className="text-lg font-black text-[#1c1917]">
+                  Ringkasan
+                </h3>
+
+                <p className="mt-2 text-sm leading-relaxed text-[#44403c]">
+                  {activeProject.summary}
+                </p>
+
+                {activeProject.description && (
+                  <p className="mt-2 text-sm leading-relaxed text-[#44403c]">
+                    {activeProject.description}
+                  </p>
+                )}
+              </section>
+
+              {activeProject.architecture?.length > 0 && (
+                <section>
+                  <h3 className="text-lg font-black text-[#1c1917]">
+                    Arsitektur &amp; Fitur
+                  </h3>
+
+                  <ul className="mt-2 list-disc space-y-1 pl-5 text-sm leading-relaxed text-[#44403c]">
+                    {activeProject.architecture.map((item) => (
+                      <li key={item}>{item}</li>
+                    ))}
+                  </ul>
+                </section>
+              )}
+
+              {activeProject.highlights?.length > 0 && (
+                <section>
+                  <h3 className="text-lg font-black text-[#1c1917]">
+                    Highlight
+                  </h3>
+
+                  <ul className="mt-2 list-disc space-y-1 pl-5 text-sm leading-relaxed text-[#44403c]">
+                    {activeProject.highlights.map((item) => (
+                      <li key={item}>{item}</li>
+                    ))}
+                  </ul>
+                </section>
+              )}
+
+              {activeProject.challenges && (
+                <section>
+                  <h3 className="text-lg font-black text-[#1c1917]">
+                    Tantangan
+                  </h3>
+
+                  <p className="mt-2 text-sm leading-relaxed text-[#44403c]">
+                    {activeProject.challenges}
+                  </p>
+                </section>
+              )}
+
+              {activeProject.stack?.length > 0 && (
+                <section>
+                  <h3 className="text-lg font-black text-[#1c1917]">
+                    Teknologi / Tools
+                  </h3>
+
+                  <div className="mt-2 flex flex-wrap gap-2">
+                    {activeProject.stack.map((item) => (
+                      <span
+                        key={item}
+                        className="rounded-lg border border-[#1c1917]/30 bg-white px-3 py-1.5 text-xs font-bold text-[#1c1917]"
+                      >
+                        {item}
+                      </span>
+                    ))}
+                  </div>
+                </section>
+              )}
+
+              {activeProject.metrics?.length > 0 && (
+                <section>
+                  <h3 className="text-lg font-black text-[#1c1917]">
+                    Detail Proyek
+                  </h3>
+
+                  <div className="mt-2 grid grid-cols-1 gap-3 sm:grid-cols-2">
+                    {activeProject.metrics.map((metric) => (
+                      <div
+                        key={`${metric.label}-${metric.value}`}
+                        className="rounded-xl border-2 border-[#1c1917]/20 bg-white p-3"
+                      >
+                        <p className="text-[10px] font-mono font-black uppercase tracking-wider text-[#78716c]">
+                          {metric.label}
+                        </p>
+
+                        <p className="mt-1 text-sm font-black text-[#1c1917]">
+                          {metric.value}
+                        </p>
+                      </div>
+                    ))}
+                  </div>
+                </section>
+              )}
+
+              <div className="flex flex-wrap gap-2 border-t-2 border-dashed border-[#1c1917]/20 pt-5">
+                {activeProject.demoUrl ? (
+                  <a
+                    href={activeProject.demoUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 rounded-xl border-2 border-[#1c1917] bg-[#dcfce7] px-4 py-2.5 text-xs font-black text-[#166534]"
+                  >
+                    <ExternalLink className="h-4 w-4" />
+                    Buka Live Demo
+                  </a>
+                ) : (
+                  <span className="inline-flex items-center gap-2 rounded-xl border-2 border-[#1c1917]/30 bg-[#f5f5f4] px-4 py-2.5 text-xs font-black text-[#57534e]">
+                    <Lock className="h-4 w-4" />
+                    Live Demo belum tersedia
+                  </span>
+                )}
+
+                {activeProject.githubUrl &&
+                  !activeProject.isPrivateRepo && (
+                    <a
+                      href={activeProject.githubUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2 rounded-xl border-2 border-[#1c1917] bg-white px-4 py-2.5 text-xs font-black text-[#1c1917]"
+                    >
+                      <ExternalLink className="h-4 w-4" />
+                      Buka GitHub
+                    </a>
+                  )}
+
+                <button
+                  type="button"
+                  onClick={() => setIsCaseStudyOpen(false)}
+                  className="rounded-xl border-2 border-[#1c1917] bg-[#1c1917] px-4 py-2.5 text-xs font-black text-white"
+                >
+                  Tutup
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
     </section>
   );
 };
