@@ -20,22 +20,23 @@ export const profileData: ProfileData = {
   experienceStart: 'Administration, Operations & Digital Skills',
 
   avatarUrl: 'https://res.cloudinary.com/df5zyhl7w/image/upload/v1792408100/FOTO_page-0001_2_ydis70.jpg',
-  
-interests: [
-  'Administrasi Umum',
-  'Data Entry & Data Verification',
-  'Document Management & Filing',
-  'Administrasi Penjualan',
-  'Customer Service',
-  'Business Operations',
-  'Microsoft Word ',
-  'Data Management',
-  'Website Development',
-  'System Development',
-  'Digital Business',
-  'F&B & Operasional',
-  'Teamwork & Problem Solving'
-],
+
+  interests: [
+    'Administrasi Umum',
+    'Data Entry & Data Verification',
+    'Document Management & Filing',
+    'Administrasi Penjualan',
+    'Customer Service',
+    'Business Operations',
+    'Microsoft Word ',
+    'Data Management',
+    'Website Development',
+    'System Development',
+    'Digital Business',
+    'F&B & Operasional',
+    'Teamwork & Problem Solving'
+  ],
+
   contact: {
     email: 'adityapermana2970@gmail.com',
     github: 'GITHUB_KAMU',
@@ -261,11 +262,12 @@ export const projectsData: Project[] = [
     ]
   },
 
+  {
     id: 'sipandi',
     title: 'SIPANDI — Sistem Peminjaman Arsip',
     subtitle: 'Sistem Informasi Peminjaman Arsip Disdukcapil',
     category: 'fullstack',
-    summary: 'Sistem informasi untuk membantu proses peminjaman dan pengembalian arsip secara digital dan terstruktur untuk login nama pengguna md sandi 123.',
+    summary: 'Sistem informasi untuk membantu proses peminjaman dan pengembalian arsip secara digital dan terstruktur.',
     description: 'SIPANDI dikembangkan untuk membantu pengelolaan peminjaman arsip, pencatatan data pengguna, stok opname, serta proses pengembalian dokumen. Sistem dikembangkan menggunakan CodeIgniter dan MySQL.',
     architecture: [
       'Login dan autentikasi pengguna',
@@ -474,7 +476,7 @@ export const projectsData: Project[] = [
   },
 
   {
-    id: 'qr-menu-order',
+    id: 'qr-menu-order-admin',
     title: 'QR Menu & Order',
     subtitle: 'Digital Menu & Table Ordering System',
     category: 'fullstack',
@@ -562,147 +564,147 @@ export const projectsData: Project[] = [
 
 export const experienceData: ExperienceItem[] = [
   {
-  id: 'education-rpl',
-  period: '2023 - 2026',
-  role: 'Rekayasa Perangkat Lunak (RPL)',
-  organization: 'SMK Bina Cendekia Cirebon',
-  badge: 'Pendidikan',
-  category: 'education',
-  description:
-    'Menempuh pendidikan Rekayasa Perangkat Lunak di SMK Bina Cendekia Cirebon dengan fokus pada pengembangan website, pemrograman, database, dan sistem digital.',
-  highlights: [
-    'Nilai Akhir Ujian Kompetensi Keahlian: 90',
-    'Pengembangan website dan sistem digital',
-    'Pembelajaran pemrograman dan database',
-    'Anggota Organisasi Sinematografi'
-  ],
-  tech: [
-    'HTML',
-    'PHP',
-    'CSS',
-    'CodeIgniter 3',
-    'React',
-    'Git'
-  ]
-},
+    id: 'education-rpl',
+    period: '2023 - 2026',
+    role: 'Rekayasa Perangkat Lunak (RPL)',
+    organization: 'SMK Bina Cendekia Cirebon',
+    badge: 'Pendidikan',
+    category: 'education',
+    description:
+      'Menempuh pendidikan Rekayasa Perangkat Lunak di SMK Bina Cendekia Cirebon dengan fokus pada pengembangan website, pemrograman, database, dan sistem digital.',
+    highlights: [
+      'Nilai Akhir Ujian Kompetensi Keahlian: 90',
+      'Pengembangan website dan sistem digital',
+      'Pembelajaran pemrograman dan database',
+      'Anggota Organisasi Sinematografi'
+    ],
+    tech: [
+      'HTML',
+      'PHP',
+      'CSS',
+      'CodeIgniter 3',
+      'React',
+      'Git'
+    ]
+  },
 
   {
-  id: 'pkl-disdukcapil',
-  period: '28 Apr - 29 Aug 2025',
-  role: 'Kearsipan dan Pelayanan',
-  organization: 'DisdukCapil Kota Cirebon',
-  badge: 'PKL',
-  category: 'project',
-  description:
-    'Melaksanakan praktik kerja lapangan pada bagian kearsipan dan pelayanan dengan menangani administrasi dokumen, digitalisasi arsip, pengelolaan data, verifikasi dokumen, serta membantu pengembangan sistem kearsipan sederhana.',
-  highlights: [
-    'Melayani sekitar 30–50 permohonan administrasi per hari',
-    'Melakukan digitalisasi dan pengarsipan lebih dari 100 dokumen',
-    'Mengelola data peminjaman dan pengembalian buku, berkas, dan dokumen',
-    'Mengembangkan aplikasi sistem kearsipan sederhana',
-    'Melakukan verifikasi dan pengecekan kelengkapan data dokumen',
-    'Memberikan pelayanan dan arahan kepada masyarakat',
-    'Bekerja sama dengan tim dalam proses pelayanan dan administrasi'
-  ],
-  tech: [
-    'Data Entry',
-    'Data Verification',
-    'Digitalisasi Arsip',
-    'Administrasi Dokumen',
-    'Microsoft Office'
-  ]
-},
+    id: 'pkl-disdukcapil',
+    period: '28 Apr - 29 Aug 2025',
+    role: 'Kearsipan dan Pelayanan',
+    organization: 'DisdukCapil Kota Cirebon',
+    badge: 'PKL',
+    category: 'project',
+    description:
+      'Melaksanakan praktik kerja lapangan pada bagian kearsipan dan pelayanan dengan menangani administrasi dokumen, digitalisasi arsip, pengelolaan data, verifikasi dokumen, serta membantu pengembangan sistem kearsipan sederhana.',
+    highlights: [
+      'Melayani sekitar 30–50 permohonan administrasi per hari',
+      'Melakukan digitalisasi dan pengarsipan lebih dari 100 dokumen',
+      'Mengelola data peminjaman dan pengembalian buku, berkas, dan dokumen',
+      'Mengembangkan aplikasi sistem kearsipan sederhana',
+      'Melakukan verifikasi dan pengecekan kelengkapan data dokumen',
+      'Memberikan pelayanan dan arahan kepada masyarakat',
+      'Bekerja sama dengan tim dalam proses pelayanan dan administrasi'
+    ],
+    tech: [
+      'Data Entry',
+      'Data Verification',
+      'Digitalisasi Arsip',
+      'Administrasi Dokumen',
+      'Microsoft Office'
+    ]
+  },
 
   {
-  id: 'kedai-bintang',
-  period: '1 Jan - 31 Mar 2026',
-  role: 'Crew Outlet',
-  organization: 'Kedai Bintang',
-  badge: 'Work Experience',
-  category: 'project',
-  description:
-    'Menangani pelayanan pelanggan, pencatatan pesanan, pengantaran makanan, persiapan makanan, delivery, serta membantu operasional outlet pada kondisi ramai.',
-  highlights: [
-    'Melayani pelanggan secara langsung dalam proses pemesanan makanan',
-    'Mencatat dan mengelola pesanan pelanggan secara akurat',
-    'Mengantarkan pesanan kepada pelanggan di tempat maupun melalui delivery',
-    'Menyiapkan dan memasak makanan sesuai SOP',
-    'Mengelola pesanan delivery',
-    'Bekerja sama dengan tim saat jam operasional sibuk',
-    'Mengembangkan sistem pemesanan digital berbasis scan barcode yang terintegrasi dengan WhatsApp'
-  ],
-  tech: [
-    'Customer Service',
-    'Order Management',
-    'Barcode',
-    'WhatsApp',
-    'Digital System'
-  ]
-},
+    id: 'kedai-bintang',
+    period: '1 Jan - 31 Mar 2026',
+    role: 'Crew Outlet',
+    organization: 'Kedai Bintang',
+    badge: 'Work Experience',
+    category: 'project',
+    description:
+      'Menangani pelayanan pelanggan, pencatatan pesanan, pengantaran makanan, persiapan makanan, delivery, serta membantu operasional outlet pada kondisi ramai.',
+    highlights: [
+      'Melayani pelanggan secara langsung dalam proses pemesanan makanan',
+      'Mencatat dan mengelola pesanan pelanggan secara akurat',
+      'Mengantarkan pesanan kepada pelanggan di tempat maupun melalui delivery',
+      'Menyiapkan dan memasak makanan sesuai SOP',
+      'Mengelola pesanan delivery',
+      'Bekerja sama dengan tim saat jam operasional sibuk',
+      'Mengembangkan sistem pemesanan digital berbasis scan barcode yang terintegrasi dengan WhatsApp'
+    ],
+    tech: [
+      'Customer Service',
+      'Order Management',
+      'Barcode',
+      'WhatsApp',
+      'Digital System'
+    ]
+  },
 
   {
-  id: 'dimsum-narawi',
-  period: '5 Apr - 25 Aug 2026',
-  role: 'Kasir & Kitchen',
-  organization: 'Dimsum Narawi',
-  badge: 'Work Experience',
-  category: 'project',
-  description:
-    'Menangani persiapan produk, proses pemesanan, transaksi, packing, pelayanan pelanggan, kebersihan outlet, dan kerja sama tim sesuai SOP.',
-  highlights: [
-    'Menyiapkan dan melakukan refill dimsum sebelum stok habis',
-    'Memastikan kematangan produk sesuai SOP',
-    'Menyiapkan dimsum goreng dan pangsit goreng',
-    'Membuat dan melakukan refill saus mentai sesuai resep',
-    'Menyiapkan pesanan dalam berbagai ukuran porsi',
-    'Melakukan proses packing pesanan dengan cepat dan rapi',
-    'Melakukan input pesanan dan pengecekan transaksi',
-    'Melayani pelanggan dengan ramah dan profesional',
-    'Menjaga kebersihan area outlet saat opening dan closing',
-    'Bekerja sama dengan tim saat jam sibuk'
-  ],
-  tech: [
-    'Point of Sale',
-    'Customer Service',
-    'Order Management',
-    'Data Entry',
-    'Teamwork',
-    'SOP'
-  ]
-},
-{
-  id: 'cv-makmur-bersama-maju',
-  period: '31 Aug - 16 Okt 2026',
-  role: 'Admin Penjualan',
-  organization: 'CV Makmur Bersama Maju',
-  badge: 'Work Experience',
-  category: 'project',
-  description:
-    'Menangani administrasi penjualan, pembuatan dokumen pengiriman, input data menggunakan Accurate dan IDOS, pengecekan dokumen, serta pengelolaan data dalam jumlah besar.',
-  highlights: [
-    'Membuat dan mencetak invoice, faktur, nota resmi tagihan, serta surat jalan',
-    'Menginput dan mencetak surat pengepakan menggunakan sistem Accurate',
-    'Melakukan pengecekan data surat pengepakan dengan sistem dan kondisi fisik barang',
-    'Menginput nomor surat jalan dan nomor plat kendaraan',
-    'Melakukan perhitungan kubikasi barang',
-    'Melakukan pengecekan dan pengelompokan dokumen berdasarkan nama toko',
-    'Menangani sekitar 100 surat jalan per hari',
-    'Menangani sekitar 40–60 surat pengepakan per hari',
-    'Mengoperasikan IDOS untuk input data order return',
-    'Melakukan input dan verifikasi data secara teliti dan konsisten'
-  ],
-  tech: [
-    'Accurate',
-    'IDOS',
-  
-    'Data Entry',
-    'Data Verification',
-    'Administrasi Penjualan',
-    'Invoice & Faktur',
-    'Surat Jalan',
-    'Surat Pengepakan'
-  ]
-},
+    id: 'dimsum-narawi',
+    period: '5 Apr - 25 Aug 2026',
+    role: 'Kasir & Kitchen',
+    organization: 'Dimsum Narawi',
+    badge: 'Work Experience',
+    category: 'project',
+    description:
+      'Menangani persiapan produk, proses pemesanan, transaksi, packing, pelayanan pelanggan, kebersihan outlet, dan kerja sama tim sesuai SOP.',
+    highlights: [
+      'Menyiapkan dan melakukan refill dimsum sebelum stok habis',
+      'Memastikan kematangan produk sesuai SOP',
+      'Menyiapkan dimsum goreng dan pangsit goreng',
+      'Membuat dan melakukan refill saus mentai sesuai resep',
+      'Menyiapkan pesanan dalam berbagai ukuran porsi',
+      'Melakukan proses packing pesanan dengan cepat dan rapi',
+      'Melakukan input pesanan dan pengecekan transaksi',
+      'Melayani pelanggan dengan ramah dan profesional',
+      'Menjaga kebersihan area outlet saat opening dan closing',
+      'Bekerja sama dengan tim saat jam sibuk'
+    ],
+    tech: [
+      'Point of Sale',
+      'Customer Service',
+      'Order Management',
+      'Data Entry',
+      'Teamwork',
+      'SOP'
+    ]
+  },
+
+  {
+    id: 'cv-makmur-bersama-maju',
+    period: '31 Aug - 16 Okt 2026',
+    role: 'Admin Penjualan',
+    organization: 'CV Makmur Bersama Maju',
+    badge: 'Work Experience',
+    category: 'project',
+    description:
+      'Menangani administrasi penjualan, pembuatan dokumen pengiriman, input data menggunakan Accurate dan IDOS, pengecekan dokumen, serta pengelolaan data dalam jumlah besar.',
+    highlights: [
+      'Membuat dan mencetak invoice, faktur, nota resmi tagihan, serta surat jalan',
+      'Menginput dan mencetak surat pengepakan menggunakan sistem Accurate',
+      'Melakukan pengecekan data surat pengepakan dengan sistem dan kondisi fisik barang',
+      'Menginput nomor surat jalan dan nomor plat kendaraan',
+      'Melakukan perhitungan kubikasi barang',
+      'Melakukan pengecekan dan pengelompokan dokumen berdasarkan nama toko',
+      'Menangani sekitar 100 surat jalan per hari',
+      'Menangani sekitar 40–60 surat pengepakan per hari',
+      'Mengoperasikan IDOS untuk input data order return',
+      'Melakukan input dan verifikasi data secara teliti dan konsisten'
+    ],
+    tech: [
+      'Accurate',
+      'IDOS',
+      'Data Entry',
+      'Data Verification',
+      'Administrasi Penjualan',
+      'Invoice & Faktur',
+      'Surat Jalan',
+      'Surat Pengepakan'
+    ]
+  },
 
   {
     id: 'ukk-school-project',
