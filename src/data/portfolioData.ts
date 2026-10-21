@@ -180,6 +180,87 @@ export const techStackData: TechItem[] = [
 
 export const projectsData: Project[] = [
   {
+    id: 'kedai-bintang-digital-order',
+    title: 'Kedai Bintang — Digital Order System',
+    subtitle: 'Sistem Pemesanan Digital Berbasis Barcode dan WhatsApp',
+    category: 'fullstack',
+    summary:
+      'Konsep sistem pemesanan digital untuk membantu pelanggan membuka alur pemesanan melalui barcode dan WhatsApp.',
+    description:
+      'Sistem ini mendukung operasional outlet dengan alur pemesanan digital berbasis scan barcode yang terintegrasi dengan WhatsApp. Detail implementasi teknis dan deployment dapat dilengkapi sesuai versi proyek yang benar-benar digunakan.',
+    architecture: [
+      'Scan barcode untuk membuka alur pemesanan',
+      'Informasi pemesanan digital',
+      'Integrasi alur pemesanan dengan WhatsApp',
+      'Dukungan proses operasional outlet'
+    ],
+    stack: [
+      'Barcode',
+      'WhatsApp',
+      'Digital System',
+      'Order Management'
+    ],
+    highlights: [
+      'Mendukung alur pemesanan digital di outlet',
+      'Menghubungkan pelanggan dengan kanal WhatsApp',
+      'Berangkat dari kebutuhan operasional dan pelayanan pelanggan'
+    ],
+    challenges:
+      'Membuat alur pemesanan yang mudah digunakan pelanggan dan sesuai dengan proses kerja outlet.',
+    role: 'Digital System Developer',
+    isMobileApp: false,
+    imageUrl: '/projects/kedai-bintang.png',
+    imageFit: 'cover',
+    featured: false,
+    metrics: [
+      { label: 'System', value: 'Digital Order' },
+      { label: 'Integration', value: 'WhatsApp' },
+      { label: 'Access', value: 'Barcode' }
+    ]
+  },
+
+  {
+    id: 'dimsum-narawi-operations',
+    title: 'Dimsum Narawi — Operasional Outlet',
+    subtitle: 'Pencatatan Pesanan dan Dukungan Operasional',
+    category: 'fullstack',
+    summary:
+      'Studi kasus proses operasional outlet yang mencakup input pesanan, pengecekan transaksi, persiapan produk, dan packing.',
+    description:
+      'Studi kasus ini mendokumentasikan alur operasional yang berkaitan dengan input pesanan, pengecekan transaksi, pelayanan pelanggan, persiapan produk, serta packing. Ini merupakan dokumentasi proses kerja, bukan klaim bahwa aplikasi khusus telah dipublikasikan.',
+    architecture: [
+      'Input pesanan',
+      'Pengecekan transaksi',
+      'Persiapan dan pemenuhan pesanan',
+      'Packing pesanan',
+      'Koordinasi pelayanan pelanggan dan tim outlet'
+    ],
+    stack: [
+      'Point of Sale',
+      'Order Management',
+      'Data Entry',
+      'Customer Service',
+      'Standard Operating Procedure'
+    ],
+    highlights: [
+      'Mendokumentasikan alur input dan pengecekan transaksi',
+      'Memperhatikan kecepatan dan kerapian pemenuhan pesanan',
+      'Berfokus pada konsistensi proses operasional sesuai SOP'
+    ],
+    challenges:
+      'Menjaga ketelitian input pesanan dan transaksi sambil mendukung persiapan produk serta pelayanan saat jam sibuk.',
+    role: 'Operations Case Study',
+    isMobileApp: false,
+    imageUrl: '/projects/dimsum-narawi.png',
+    imageFit: 'cover',
+    featured: false,
+    metrics: [
+      { label: 'Focus', value: 'Order & Transaction' },
+      { label: 'Workflow', value: 'Outlet Operations' },
+      { label: 'Standard', value: 'SOP' }
+    ]
+  },
+
     id: 'sipandi',
     title: 'SIPANDI — Sistem Peminjaman Arsip',
     subtitle: 'Sistem Informasi Peminjaman Arsip Disdukcapil',
